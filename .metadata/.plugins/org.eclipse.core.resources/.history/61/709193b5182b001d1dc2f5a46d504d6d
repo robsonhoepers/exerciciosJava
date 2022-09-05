@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class L1E2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner tc = new Scanner(System.in);
+		double area = 0;
+		char opcao = 0;
+		double base = 0;
+		double altura = 0;
+		double lado = 0;
+		
+		while (opcao != 'n' && opcao != 'N') {
+			System.out.println("Digite  's' para calcular as areas ou 'n' para sair");
+			opcao = tc.next().charAt(0);
+			
+			while(opcao == 's') {
+				System.out.println("Digite 'c' para Circulo, 'r' para Retangulo, 'q' para Quadrado, 't' para Triangulo");
+				
+				  if (opcao == 'c') {
+					  System.out.println("Digite o Raio");
+					  double raio = tc.nextDouble();
+	                   area = raio * raio * Math.PI;
+	                   System.out.println("Area Circulo = " + area);
+	                } else if (opcao == 'r') {
+	                	System.out.println("Digite a Base");
+	                	base = tc.nextDouble();
+	                	System.out.println("Digite a Altura");
+	                	altura = tc.nextDouble();
+	                	area = base * altura;
+	                	System.out.println("Area Retangulo = " + area);
+	                } else if (opcao == 'q') {
+	                	System.out.println("Digite a Base");
+	                	base = tc.nextDouble();
+	                	System.out.println("Digite a Altura");
+	                	altura = tc.nextDouble();
+	                    area = (base * altura)/2;
+	                    System.out.println("Area Quadrado = " + area);
+	                } else if (opcao == 't') {
+	                	System.out.println("Digite o Lado");
+	                	lado = tc.nextDouble();
+	                    area = (lado* lado); 
+	                    System.out.println("Area Triangulo = " + area);
+	                }
+			}
+			
+			
+		}
+
+	}
+
+}

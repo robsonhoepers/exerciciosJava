@@ -1,0 +1,71 @@
+import java.util.Scanner;
+
+public class L1E3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner tc = new Scanner(System.in);
+		
+		
+		double imc =0;
+		char opcao = ' ';
+		
+		
+			while (opcao != 'n' && opcao != 'N') {
+				System.out.println("Digite  's' para calcular o IMC ou 'n' para sair");
+				opcao = tc.next().charAt(0);
+				
+				
+				if (opcao == 's'){
+					imc = calcularImc(tc); 
+				} else {	
+					System.out.println("Opção Inválida!");					
+				}
+			
+				if (imc <= 16.9) {
+					System.out.println(imc + ", Muito abaixo do peso");
+					
+                }
+                
+                if ((imc > 16.9) && (imc <= 18.4)) {
+                	System.out.println(imc + ", Abaixo do peso");
+                	
+                }
+
+                if ((imc > 18.4) && (imc <= 24.9)) {
+                	System.out.println(imc + ", Peso normal");
+                	
+                }
+
+                if ((imc > 24.9) && (imc <= 29.9)) {
+                	System.out.println(imc + ", Acima do peso");
+                	
+                }
+
+                if ((imc > 29.9) && (imc <= 34.9)) {
+                	System.out.println(imc + ", Obesidade grau I");
+                	
+                }
+
+                if ((imc > 34.9) && (imc <= 40)) {
+                	System.out.println(imc + ", Obesidade grau II");
+                	
+                }
+
+                if (imc > 40) {
+                	System.out.println(imc + ", Obesidade grau III");
+                	
+			}
+		}       
+	}
+	private static double calcularImc(Scanner tc) {
+		System.out.println("Digite seu Peso: ");
+		double peso = tc.nextDouble();
+		System.out.println("Digite sua Altura: ");
+		double altura = tc.nextDouble();
+		double imc = (peso/(altura * altura));
+		return imc;
+	}
+
+}

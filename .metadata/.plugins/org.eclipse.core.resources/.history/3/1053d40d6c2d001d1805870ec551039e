@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class L1E4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner tc = new Scanner(System.in);
+		
+		char genero = ' ';
+		double pesoIdeal = 0;
+		
+		while(genero != 's' && genero != 'S') {
+			System.out.println("Calculo Peso ideal, Informe:");
+			System.out.println("'F' Feminino");
+			System.out.println("'M' Masculino");
+			
+			genero = tc.next().charAt(0); 
+			
+			
+			switch (genero) {
+			case 'F':
+				pesoIdeal = calcularFeminino(tc); 
+				break;
+				
+			case 'M':
+				pesoIdeal = calcularMasculino(tc); 
+				break;
+			default:
+				System.out.println("Opção Inválida!");
+				break;			
+				
+			}
+			if (genero == 'F') {
+				System.out.println("Peso Ideal Feminino:  " + pesoIdeal);
+			} else {
+				System.out.println("Peso Ideal Masculino:  " + pesoIdeal);
+			}
+		}
+	}
+		private static double calcularFeminino(Scanner tc) {
+			System.out.println("Informe sua altura: ");
+			double peso = tc.nextDouble(); 
+			double pesoIdeal = (62.1 * peso) - 44.7;
+			return pesoIdeal;
+		}
+		
+		private static double calcularMasculino(Scanner tc) {
+			System.out.println("Informe sua altura: ");
+			double peso = tc.nextDouble(); 
+			double pesoIdeal = (72.1 * peso) - 58;
+			return pesoIdeal;
+		}
+}

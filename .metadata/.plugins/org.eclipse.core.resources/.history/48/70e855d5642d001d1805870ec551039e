@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class L1E3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner tc = new Scanner(System.in);
+		
+		double peso = 0;
+		double altura = 0;
+		double imc =0;
+		char opcao = ' ';
+		
+			while (opcao != 'n' && opcao != 'N') {
+				System.out.println("Digite  's' para calcular o IMC ou 'n' para sair");
+				opcao = tc.next().charAt(0);
+				
+				
+				if(opcao == 's' && opcao == 'S') {
+					imc = calcularImc(tc);
+				}
+			}
+
+	}
+	private static double calcularImc(Scanner tc) {
+		System.out.println("Digite seu Peso: ");
+		double peso = tc.nextDouble();
+		System.out.println("Digite sua Altura: ");
+		double altura = tc.nextDouble();
+		double imc = (peso/(altura * altura));
+		return imc;
+	}
+
+}
