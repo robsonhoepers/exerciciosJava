@@ -16,7 +16,7 @@ public class CalcMetodos {
    
     //setter e getter
     public void setMemoria(double memoria ){
-        this.memoria = 0; 
+        this.memoria = ' '; 
     }
     public double getMemoria(){
         return this.memoria; 
@@ -42,6 +42,14 @@ public class CalcMetodos {
     	 this.memoria = num1 * num2;
      	return this.memoria; 
     }
+    public void addMemoria() {
+    	this.memoria ++;
+    }; 
+    
+    public double clrMemoria() {
+    	this.memoria = 0;
+    	return this.memoria;
+    };
 
 
 

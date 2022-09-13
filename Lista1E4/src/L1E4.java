@@ -22,13 +22,16 @@ public class L1E4 {
 			
 			switch (menu) {
 			case 'F':
+			case 'f':
 				pesoIdeal = calcularFeminino(tc); 
 				break;
 				
 			case 'M':
+			case 'm':
 				pesoIdeal = calcularMasculino(tc); 
 				break;
 			case 'n':
+			case 'N':
 				System.out.println("Programa encerrado!");
 				break;
 			default:
@@ -37,10 +40,10 @@ public class L1E4 {
 				break;			
 				
 			}
-			if (menu == 'F') {
+			if (menu == 'F' || menu == 'f') {
 				System.out.println("Peso Ideal Feminino:  " + pesoIdeal);
 			} 
-			if (menu == 'M') {
+			if (menu == 'M' || menu == 'm') {
 				System.out.println("Peso Ideal Masculino:  " + pesoIdeal);
 			}
 		}

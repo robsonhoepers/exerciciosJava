@@ -24,21 +24,21 @@ public class Calculadora {
 			switch (menu) {
 			case '+':
 				resultado = somar(tc);
-				System.out.println(resultado);
+				System.out.println("Resultado = " + resultado);
 				break;
 			case '-':
 				resultado = subtrair(tc);
-				System.out.println(resultado);
+				System.out.println("Resultado = " + resultado);
 				break;
 				
 			case '/':
 				resultado = dividir(tc);
-				System.out.println(resultado);
+				System.out.println("Resultado = " + resultado);
 				break;
 				
 			case '*':
 				resultado = multiplicar(tc);
-				System.out.println(resultado);
+				System.out.println("Resultado = " + resultado);
 				break;
 				
 			case 'n':
